@@ -10,15 +10,20 @@
 	$sql="SELECT * FROM sec_labusers WHERE login='".$login."'";
 	if (mysqli_query($con,$sql) == true){
 		$result=mysqli_query($con, $sql);
-		$row = mysqli_fetch_array($result);
-		$pswd_bd = $row['pswd'];
-		if ($pswd_encriptado==$pswd_bd) {
-			echo "Logueado<br>";
+		$numero_filas=mysqli_num_rows($result);
+		if ($numero_filas == 1) {
+			$row = mysqli_fetch_array($result);
+			$pswd_bd = $row['pswd'];
+			if ($pswd_encriptado==$pswd_bd) {
+				echo "Logueado<br>";
+			}else{
+				echo "Contraseña incorrecta!<br>";
+			}
+			echo $pswd_encriptado."<br>";
+			echo $pswd_bd;
 		}else{
-			echo "Contraseña incorrecta!<br>";
+			echo "Usuario no existe!";
 		}
-		echo $pswd_encriptado."<br>";
-		echo $pswd_bd;
 	}else{
 		echo $con->error."\nerror: ". $sql . "<br>";
 	}
