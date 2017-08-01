@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>CREAR EMPLEADO</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script type="text/javascript">
+        $(document).ready(function(){ 
+            //alert("funciona");
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>CREACIÓN DE USUARIOS</h1>
+        <form id="formulario" method="post" action="../crear_usuario.php">
+            <div class="row datos_cabecera">
+                <div class="col-xs-12 col-md-12">
+                    <label for="text_usuario">USUARIO</label>
+                    <input type="text" class="form-control" id="text_usuario" name="text_usuario" placeholder="Nombre usuario" required>
+                </div>
+                <div class="col-xs-12 col-md-12">
+                    <label for="text_contrasena">CONTRASEÑA</label>
+                    <input type="text" class="form-control" id="text_contrasena" name="text_contrasena" placeholder="Contraseña" required>
+                </div>
+                <div class="col-xs-12 col-md-12">
+                    <label for="text_nombre">NOMBRE</label>
+                    <input type="text" class="form-control" id="text_nombre" name="text_nombre" placeholder="Nombre" required>
+                </div>
+                <div class="col-xs-12 col-md-12">
+                    <label for="text_email">E-MAIL</label>
+                    <input type="text" class="form-control" id="text_email" name="text_email" placeholder="email" required>
+                </div>
+                <div class="col-xs-12 col-md-12">
+                    <label for="text_activo">ACTIVO</label>
+                    <input type="text" class="form-control" id="text_activo" name="text_activo" placeholder="Usuario activo (Y/N)" required>
+                </div>
+                <div class="col-xs-12 col-md-12">
+                    <label for="text_grupo">GRUPO</label>
+                    <input type="text" class="form-control" id="text_grupo" name="text_grupo" placeholder="Codigo grupo">
+                </div>
+                <div class="col-xs-12 col-md-12">
+                    <label for="text_empresa">EMPRESA</label>
+                    <input type="text" class="form-control" id="text_empresa" name="text_empresa" placeholder="Codigo empresa" required>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12" style="text-align: left;">
+                    <button type="submit" class="btn btn-success btn-lg boton sombra" style="width: 100%;" onclick="">
+                        GUARDAR
+                        <span class="glyphicon glyphicon-floppy-disk"></span>
+                    </button>
+                </div> 
+            </div>
+        </form>
+</body>
+</html>
